@@ -1,6 +1,6 @@
 import {BrowserRouter, Switch, Redirect} from 'react-router-dom'
 import { LoginPage } from '../Pages/Login/index.component'
-import { LoginRoute, PrivateRoute } from './PrivateRoutes'
+import { LoginRoute, PrivateRoute } from './DifferentRoutes'
 
 export const Routes = () => {
     return(

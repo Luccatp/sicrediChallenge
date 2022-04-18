@@ -1,4 +1,4 @@
-import { Component, useEffect } from "react"
+import { useEffect } from "react"
 import {Route, Redirect} from 'react-router-dom'
 
 
