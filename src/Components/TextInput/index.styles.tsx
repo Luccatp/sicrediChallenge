@@ -30,6 +30,10 @@ export const Input = styled.input`
       font-size: 12px;
       color: black;
     }
+
+    @media screen and (min-width: 1000px) {
+      width: 25rem;
+    }
 `
 
 export const InputLabel = styled.label`

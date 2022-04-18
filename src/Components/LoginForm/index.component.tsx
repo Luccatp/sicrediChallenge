@@ -1,13 +1,23 @@
+import { ChangeEventHandler } from "react";
+import { LoginTitle } from "../../Pages/Login/index.styles";
 import { ActionButton } from "../ActionButton/index.component";
 import { TextInput } from "../TextInput/index.component";
-import { FormWrapper } from "./index.styles";
+import { Form } from "./index.styles";
+
+interface FormProps {
+    onSubmit:any,
+    onChangeEmail:ChangeEventHandler,
+    onChangePassword:ChangeEventHandler,
+    emailValue:string,
+    passwordValue:string
+}
 
 
-
-export const LoginForm = () => (
-    <FormWrapper>
-        <TextInput value="" type="email" label="Email" onChange={() => null}/>
-        <TextInput value="" type="email" label="Password" onChange={() => null}/>
-        <ActionButton inverted={false} type={"submit"}></ActionButton>
-    </FormWrapper>
+export const LoginForm = (props:FormProps) => (
+        <Form onSubmit={props.onSubmit}>
+            <LoginTitle data-testid='LoginTitle'>SICREDI <br/>DRAGONS</LoginTitle>
+            <TextInput value={props.emailValue} type="email" label="Email" onChange={props.onChangeEmail}/>
+            <TextInput value={props.passwordValue} type="password" label="Password" onChange={props.onChangePassword}/>
+            <ActionButton inverted={false} type={"submit"}></ActionButton>
+        </Form>
 )

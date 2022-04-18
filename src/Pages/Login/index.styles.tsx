@@ -11,7 +11,8 @@ export const LoginTitle = styled.h1`
 export const LoginWrapper = styled.div`
     display: grid;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
     min-width: 100vw;
-    background-color: aliceblue;
+    background-color: #eeeeee;    
 `
