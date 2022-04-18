@@ -1,9 +1,8 @@
-import { useEffect } from "react"
 import {Route, Redirect} from 'react-router-dom'
 
 
-const isAuthenticated = () => {
-    if(window.localStorage.getItem('authenticated')) {
+export const isAuthenticated = () => {
+    if(window.localStorage.getItem('login') === 'true') {
         return true
     } else {
         return false
@@ -11,7 +10,6 @@ const isAuthenticated = () => {
 }
 
 export const PrivateRoute = ({component: Component, ...rest}:any) => {
-        useEffect(() => {isAuthenticated()},[])
     return( <Route {...rest} render={(props:any) => (
         isAuthenticated() ? (
             <Component {...props}/>
@@ -21,12 +19,12 @@ export const PrivateRoute = ({component: Component, ...rest}:any) => {
     )}/>
 )}
 
-export const LoginRoute = ({component: Component, ...rest}:any) => (
-    <Route {...rest} render={(props:any) => (
+export const LoginRoute = ({component: Component, ...rest}:any) => {
+   return <Route {...rest} render={(props:any) => (
         isAuthenticated() ? (
             <Redirect to={{pathname:'/dragons', state:{from:props.location}}}></Redirect>
         ) : (
             <Component {...props}/>
         )
     )}/>
-)
+}

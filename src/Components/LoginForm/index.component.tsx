@@ -18,6 +18,6 @@ export const LoginForm = (props:FormProps) => (
             <LoginTitle data-testid='LoginTitle'>SICREDI <br/>DRAGONS</LoginTitle>
             <TextInput value={props.emailValue} type="email" label="Email" onChange={props.onChangeEmail}/>
             <TextInput value={props.passwordValue} type="password" label="Password" onChange={props.onChangePassword}/>
-            <ActionButton inverted={false} type={"submit"}></ActionButton>
+            <ActionButton inverted={false} type={"submit"}>Log in</ActionButton>
         </Form>
 )

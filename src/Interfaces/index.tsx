@@ -11,7 +11,3 @@ export interface NewDragon {
     type:string
 }
 
-export type DragonsContextType = {
-    currentDragons: Dragon[];
-    setDragons: any;
-  };

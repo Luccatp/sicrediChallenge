@@ -3,10 +3,12 @@ import { toast, ToastContainer } from "react-toastify"
 import { LoginForm } from "../../Components/LoginForm/index.component"
 import { LoginWrapper } from "./index.styles"
 import 'react-toastify/dist/ReactToastify.css'
+import { useHistory } from "react-router-dom";
 
 export const LoginPage = () => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+    const history = useHistory()
 
     const handleEmailChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value)
@@ -16,10 +18,12 @@ export const LoginPage = () => {
         setPassword(e.target.value)
     }
 
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if(email === '123@1' && password === 'Sicredi123') {
-            window.localStorage.setItem('authenticated', 'authenticated')
+        if(email === '1@1' && password === '1') {
+            window.localStorage.setItem('login', 'true')
+            history.push('/dragons')
+            
         } else {
             toast.error('Erro digite o email e senha corretos', {
                 position: "top-center",
@@ -32,6 +36,7 @@ export const LoginPage = () => {
                 });
         }
     }
+
 
     return(
         <>

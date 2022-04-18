@@ -6,7 +6,7 @@ import { ActionButton } from "./index.component"
 const onClickMock = jest.fn()
 
 const setup1 = () => {
-    render(<ActionButton type="submit" inverted={false} onClick={onClickMock}/>)
+    render(<ActionButton type="submit" inverted={false} onClick={onClickMock}>LogIn</ActionButton>)
 }
 
 
