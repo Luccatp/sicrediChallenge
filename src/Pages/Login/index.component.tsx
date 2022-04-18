@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
+import { toast, ToastContainer } from "react-toastify"
 import { LoginForm } from "../../Components/LoginForm/index.component"
 import { LoginWrapper } from "./index.styles"
-
+import 'react-toastify/dist/ReactToastify.css'
 
 export const LoginPage = () => {
     const [email, setEmail] = useState<string>('')
@@ -20,12 +21,22 @@ export const LoginPage = () => {
         if(email === '123@1' && password === 'Sicredi123') {
             window.localStorage.setItem('authenticated', 'authenticated')
         } else {
-            console.log('error')
+            toast.error('Erro digite o email e senha corretos', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
         }
     }
 
     return(
-        <LoginWrapper>
+        <>
+        <ToastContainer/>
+        <LoginWrapper>     
             <LoginForm 
                 onSubmit={handleSubmit} 
                 onChangeEmail={handleEmailChange} 
@@ -33,5 +44,6 @@ export const LoginPage = () => {
                 emailValue={email} 
                 passwordValue={password}/>
         </LoginWrapper>
+        </>
     )
 }
