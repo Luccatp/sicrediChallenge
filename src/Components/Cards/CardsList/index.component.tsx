@@ -23,7 +23,7 @@ export const CardList = (props:CardListProps) => {
                 histories={dragon.histories} 
                 id={dragon.id}
                 handleEditClick={() => props.handleEditClick(dragon.id, dragon.name, dragon.type, dragon.createdAt)}
-                handleRemoveClick={() => props.handleRemoveClick()}
+                handleRemoveClick={() => props.handleRemoveClick(dragon.id)}
             />
     ))}
         </CardListDiv>

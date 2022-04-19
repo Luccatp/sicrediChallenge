@@ -2,11 +2,13 @@ import { Header } from "../../Components/Header/index.component"
 import { DragonsWrapper } from "./index.styles"
 import {useHistory} from 'react-router-dom'
 import { CardList } from "../../Components/Cards/CardsList/index.component"
-import React from "react"
+import React, { useContext } from "react"
+import { DragonsContext } from "../../Contexts/DragonsContext"
+import { dragonsApi } from "../../API"
 
 export const DragonsPage = () => {
     const history = useHistory()
-
+    const {currentDragons, setDragons} = useContext(DragonsContext)
     const logOutClick = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         history.push('/')
@@ -21,10 +23,20 @@ export const DragonsPage = () => {
         })
     }
 
+    const removeHandler = (id:number) => {
+        dragonsApi.delete(`dragon/${id}`).then((_:any) => {
+            let filteredDragons = currentDragons.filter((a: any) => {
+            return a.id !== id
+        })
+        setDragons(filteredDragons)
+
+    })
+    }
+
     return(
     <DragonsWrapper>
         <Header onClick={logOutClick}/>
-        <CardList handleEditClick={editHandler} handleRemoveClick={() => null}/>
+        <CardList handleEditClick={editHandler} handleRemoveClick={removeHandler}/>
     </DragonsWrapper>
     )
 }
