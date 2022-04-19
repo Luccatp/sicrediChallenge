@@ -1,11 +1,21 @@
-import { useEffect, useState } from "react"
+import { MouseEventHandler, useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
-import ImagesApi from "../../API/ImagesAPI/ImagesApi"
-import { Dragon } from "../../Interfaces"
+import ImagesApi from "../../../API/ImagesAPI/ImagesApi"
 import { DragonImg, DragonInfo, FlipCard, FlipCardBack, FlipCardFront, FlipCardInner, ImageDiv } from "./index.styles"
-import LogoDragon from '../../Images/LogoDragon.png'
+import LogoDragon from '../../../Images/LogoDragon.png'
+import { CardButtons } from "../../Buttons/CardButtons/index.styles"
 
-export const DragonGist = (props:Dragon) => {
+interface DragonGistProps {
+    handleRemoveClick: MouseEventHandler<HTMLButtonElement>;
+    handleEditClick: MouseEventHandler<HTMLButtonElement>;
+    createdAt: string,
+    name: string,
+    type: string,
+    histories: string,
+    id: number
+}
+
+export const DragonGist = (props:DragonGistProps) => {
     const history = useHistory()
     const [image, setImage] = useState<string>('')
     useEffect(() => {
@@ -36,6 +46,7 @@ export const DragonGist = (props:Dragon) => {
                     <p>
                         tipo: "{props.type}"
                     </p>
+                    <CardButtons handleEditClick={props.handleEditClick} handleRemoveClick={props.handleRemoveClick}/>
                 </DragonInfo>
             </FlipCardBack>
         </FlipCardInner>

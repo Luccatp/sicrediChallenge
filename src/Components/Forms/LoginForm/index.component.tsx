@@ -1,7 +1,7 @@
 import { ChangeEventHandler } from "react";
-import { LoginTitle } from "../../Pages/Login/index.styles";
-import { ActionButton } from "../ActionButton/index.component";
-import { TextInput } from "../TextInput/index.component";
+import { LoginTitle } from "../../../Pages/Login/index.styles";
+import { ActionButton } from "../../Buttons/ActionButton/index.component";
+import { TextInput } from "../../TextInput/index.component";
 import { Form } from "./index.styles";
 
 interface FormProps {

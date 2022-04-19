@@ -4,6 +4,7 @@ import { LoginPage } from '../Pages/Login/index.component'
 import { LoginRoute, PrivateRoute } from './DifferentRoutes'
 import { createBrowserHistory } from 'history';
 import { AddDragons } from '../Pages/AddDragons/index.component';
+import { EditDragons } from '../Pages/EditPage/index.component';
 
 export const Routes = () => {
     const history = createBrowserHistory()
@@ -13,7 +14,7 @@ export const Routes = () => {
                 <LoginRoute path='/' exact component={LoginPage}/>
                 <PrivateRoute path='/dragons' exact component={DragonsPage}/>
                 <PrivateRoute path='/addDragons' exact component={AddDragons}/>
-                <PrivateRoute path='/dragons' exact component={DragonsPage}/>
+                <PrivateRoute path='/editDragons' exact component={EditDragons}/>
                 <Redirect to={'/dragons'} path='*'></Redirect>
             </Switch>
         </Router>

@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from "react"
-import { ActionButton } from "../ActionButton/index.component"
-import { TextInput } from "../TextInput/index.component"
+import { ActionButton } from "../../Buttons/ActionButton/index.component"
+import { TextInput } from "../../TextInput/index.component"
 import { AddEditWrapper } from "./index.styles"
 
 export interface NewDragon {
@@ -14,8 +14,8 @@ export interface NewDragon {
 export const AddEditForm = (props:NewDragon) => {
     return(
         <AddEditWrapper>
-            <TextInput value={props.NameValue} type="email" label="Email" onChange={props.onChangeName}/>
-            <TextInput value={props.TypeValue} type="password" label="Password" onChange={props.onChangeType}/>
+            <TextInput value={props.NameValue} type="text" label="Nome" onChange={props.onChangeName}/>
+            <TextInput value={props.TypeValue} type="text" label="Tipo" onChange={props.onChangeType}/>
             <ActionButton inverted={false} type={"submit"}>{props.buttonText}</ActionButton>
         </AddEditWrapper>
     )

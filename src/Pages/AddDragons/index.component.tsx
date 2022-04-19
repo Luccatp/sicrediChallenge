@@ -35,7 +35,9 @@ export const AddDragons = () => {
             type={type} 
             id={lastId[0]} 
             createdAt={"2022-04-18T13:16:25.072Z"} 
-            histories={""}            
+            histories={""}  
+            handleEditClick={() => null}
+            handleRemoveClick={() => null}          
           />    
     )
 }

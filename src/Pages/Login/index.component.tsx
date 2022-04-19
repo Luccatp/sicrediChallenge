@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { toast, ToastContainer } from "react-toastify"
-import { LoginForm } from "../../Components/LoginForm/index.component"
+import { LoginForm } from "../../Components/Forms/LoginForm/index.component"
 import { LoginWrapper } from "./index.styles"
 import 'react-toastify/dist/ReactToastify.css'
 import { useHistory } from "react-router-dom";

@@ -16,6 +16,7 @@ export const TextInput = (props:InputsProps) => {
                 value={props.value}
                 type={props.type}
                 onChange={props.onChange}
+                maxLength={16}
             />
             {props.label && <InputLabel 
                 shrink={props.value.length > 0 ? true : false} 

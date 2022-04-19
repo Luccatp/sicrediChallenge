@@ -1,11 +1,15 @@
-import { useContext } from "react"
-import { DragonsContext } from "../../Contexts/DragonsContext"
-import { Dragon } from "../../Interfaces"
+import { MouseEventHandler, useContext } from "react"
+import { DragonsContext } from "../../../Contexts/DragonsContext"
+import { Dragon } from "../../../Interfaces"
 import { DragonGist } from "../DragonGist/index.component"
 import { CardListDiv } from "./index.styles"
 
+interface CardListProps {
+    handleRemoveClick: MouseEventHandler<HTMLButtonElement>
+    handleEditClick: MouseEventHandler<HTMLButtonElement>
+}
 
-export const CardList = () => {
+export const CardList = (props:CardListProps) => {
     const {currentDragons} = useContext(DragonsContext)
 
     return( 
@@ -18,6 +22,8 @@ export const CardList = () => {
                 type={dragon.type} 
                 histories={dragon.histories} 
                 id={dragon.id}
+                handleEditClick={props.handleEditClick}
+                handleRemoveClick={props.handleRemoveClick}
             />
     ))}
         </CardListDiv>

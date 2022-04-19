@@ -1,4 +1,4 @@
-import { ActionButton } from "../ActionButton/index.component"
+import { ActionButton } from "../Buttons/ActionButton/index.component"
 import { ButtonDiv, DivHeader, HeaderTitle, TitleDiv } from "./index.styles"
 
 interface HeaderProps {

@@ -1,6 +1,6 @@
-import { ChangeEventHandler } from "react";
-import { AddEditForm } from "../../Components/AddEditForm/index.component";
-import { DragonGist } from "../../Components/DragonGist/index.component";
+import { ChangeEventHandler, MouseEventHandler } from "react";
+import { AddEditForm } from "../../Components/Forms/AddEditForm/index.component";
+import { DragonGist } from "../../Components/Cards/DragonGist/index.component";
 import { AddWrapper, RightSide } from "./index.styles";
 
 interface ContainerProps {
@@ -14,7 +14,8 @@ interface ContainerProps {
     id:number
     createdAt:string
     histories:string
-
+    handleRemoveClick: MouseEventHandler<HTMLButtonElement>;
+    handleEditClick: MouseEventHandler<HTMLButtonElement>;
 }
 
 
@@ -27,6 +28,16 @@ export const AddEditContainer = (props:ContainerProps) => (
                 onChangeName={props.onChangeName}
                 onChangeType={props.onChangeType}
             />
-            <RightSide><DragonGist createdAt={props.createdAt} name={props.name} type={props.type} histories={props.histories} id={props.id} /></RightSide>
+            <RightSide>
+                <DragonGist 
+                    createdAt={props.createdAt} 
+                    name={props.name} 
+                    type={props.type} 
+                    histories={props.histories} 
+                    id={props.id} 
+                    handleEditClick={props.handleEditClick}
+                    handleRemoveClick={props.handleRemoveClick}
+                />
+            </RightSide>
         </AddWrapper>
 )

@@ -1,7 +1,7 @@
 import { Header } from "../../Components/Header/index.component"
 import { DragonsWrapper } from "./index.styles"
 import {useHistory} from 'react-router-dom'
-import { CardList } from "../../Components/CardsList/index.component"
+import { CardList } from "../../Components/Cards/CardsList/index.component"
 
 export const DragonsPage = () => {
     const history = useHistory()
@@ -11,10 +11,11 @@ export const DragonsPage = () => {
         history.push('/')
         window.localStorage.removeItem('login')
     }
+
     return(
     <DragonsWrapper>
         <Header onClick={logOutClick}/>
-        <CardList/>
+        <CardList handleEditClick={() => null} handleRemoveClick={() => null}/>
     </DragonsWrapper>
     )
 }

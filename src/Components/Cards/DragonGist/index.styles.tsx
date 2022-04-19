@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const FlipCard = styled.div`
     background-color: transparent;
-    width: 15rem;
-    height: 11rem;
+    width: 17rem;
+    height: 15rem;
     perspective: 1000px;
 `
 
@@ -71,7 +71,7 @@ export const FlipCardBack = styled(FlipCardBackFront)`
 `
 
 export const DragonInfo = styled.div`
-    font-size: 0.9rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
 `
