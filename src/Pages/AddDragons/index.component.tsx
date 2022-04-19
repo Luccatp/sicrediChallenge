@@ -4,6 +4,7 @@ import { AddEditContainer } from "../../containers/AddEditPages"
 
 export const AddDragons = () => {
     return(
-        <AddEditContainer/>    
+        <AddEditContainer NameValue={""} TypeValue={""} buttonText={""} onChangeName={() => null} onChangeType={() => null}
+          />    
     )
 }
