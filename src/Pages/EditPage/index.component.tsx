@@ -18,7 +18,7 @@ export const EditDragons = (props:any) => {
     return(
         <AddEditContainer 
             NameValue={name} 
-            TypeValue={name} 
+            TypeValue={type} 
             buttonText={"Edit your dragon"} 
             onChangeName={nameHandler}
             onChangeType={typeHandler}

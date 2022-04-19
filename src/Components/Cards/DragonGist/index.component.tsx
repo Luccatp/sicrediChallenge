@@ -1,4 +1,4 @@
-import { MouseEventHandler, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import ImagesApi from "../../../API/ImagesAPI/ImagesApi"
 import { DragonImg, DragonInfo, FlipCard, FlipCardBack, FlipCardFront, FlipCardInner, ImageDiv } from "./index.styles"
@@ -6,8 +6,8 @@ import LogoDragon from '../../../Images/LogoDragon.png'
 import { CardButtons } from "../../Buttons/CardButtons/index.styles"
 
 interface DragonGistProps {
-    handleRemoveClick: MouseEventHandler<HTMLButtonElement>;
-    handleEditClick: MouseEventHandler<HTMLButtonElement>;
+    handleRemoveClick: any
+    handleEditClick: any
     createdAt: string,
     name: string,
     type: string,
