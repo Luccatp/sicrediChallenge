@@ -27,8 +27,7 @@ export const DragonsProvider = ({children}:any) => {
         .then(response => {
             const dragonsSorted = response.data.sort((a:Dragon,b:Dragon) => a.name.localeCompare(b.name))
             setDragons(dragonsSorted)
-            console.log('updated')
-        })
+        }).catch(() => history.push('/error'))
     }, [history])  
     const value = {currentDragons, setDragons}
     return <DragonsContext.Provider value={value}>{children}</DragonsContext.Provider>

@@ -27,3 +27,8 @@ export const HeaderTitle = styled.h1`
     height: max-content;
     text-align: center;
 `
+
+export const LogoDragon = styled.img`
+    height: 10rem;
+    width: 10rem;
+`
