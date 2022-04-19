@@ -19,6 +19,11 @@ export const DragonsPage = () => {
         window.localStorage.removeItem('login')
     }
 
+    const addPageHandler = (e:React.FormEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        history.push('/addDragons')
+    }
+
     const editHandler = (id:number, name:string, type:string, createdAt:string) => {
         history.push({
             pathname: '/editDragons',
@@ -41,7 +46,7 @@ export const DragonsPage = () => {
     <DragonsWrapper>
         <Header onClick={logOutClick}/>
         <CardList handleEditClick={editHandler} handleRemoveClick={removeHandler}/>
-        <AddPageButton>+</AddPageButton>
+        <AddPageButton onClick={addPageHandler}>+</AddPageButton>
     </DragonsWrapper>
     )
 }

@@ -13,12 +13,12 @@ export const DragonsWrapper = styled.div`
 
 export const AddPageButton = styled.button`
     display: flex;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    background-color: #64C832;
+    background-color: white;
     border: 1px solid black;
-    font-size: 1rem;
+    font-size: 3rem;
     position: fixed;
     top: 20px;
     right: 20px;
@@ -29,4 +29,21 @@ export const AddPageButton = styled.button`
     &:hover {
         cursor: pointer;
     }
+
+    @keyframes glowing {
+  0% {
+    background-color: #162213;
+    
+    background-image: linear-gradient(30%);
+  }
+  50% {
+    background-color: #0b630b;
+    background-image: linear-gradient(50%);
+  }
+  100% {
+    background-color: black;
+    background-image: linear-gradient(80%);
+  }
+}
+    animation: glowing 5s infinite;
 ` 
