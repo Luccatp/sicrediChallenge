@@ -16,6 +16,7 @@ interface ContainerProps {
     histories:string
     handleRemoveClick: MouseEventHandler<HTMLButtonElement>;
     handleEditClick: MouseEventHandler<HTMLButtonElement>;
+    buttonClick:any
 }
 
 
@@ -27,6 +28,7 @@ export const AddEditContainer = (props:ContainerProps) => (
                 buttonText={props.buttonText}
                 onChangeName={props.onChangeName}
                 onChangeType={props.onChangeType}
+                buttonClick={props.buttonClick}
             />
             <RightSide>
                 <DragonGist 

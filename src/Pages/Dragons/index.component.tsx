@@ -2,13 +2,17 @@ import { Header } from "../../Components/Header/index.component"
 import { DragonsWrapper } from "./index.styles"
 import {useHistory} from 'react-router-dom'
 import { CardList } from "../../Components/Cards/CardsList/index.component"
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { DragonsContext } from "../../Contexts/DragonsContext"
 import { dragonsApi } from "../../API"
 
 export const DragonsPage = () => {
     const history = useHistory()
     const {currentDragons, setDragons} = useContext(DragonsContext)
+
+    useEffect(() => {
+    }, [])
+
     const logOutClick = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         history.push('/')

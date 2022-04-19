@@ -9,6 +9,7 @@ export interface NewDragon {
     TypeValue: string
     NameValue: string
     buttonText: string
+    buttonClick:any
 }
 
 export const AddEditForm = (props:NewDragon) => {
@@ -16,7 +17,7 @@ export const AddEditForm = (props:NewDragon) => {
         <AddEditWrapper>
             <TextInput value={props.NameValue} type="text" label="Nome" onChange={props.onChangeName}/>
             <TextInput value={props.TypeValue} type="text" label="Tipo" onChange={props.onChangeType}/>
-            <ActionButton inverted={false} type={"submit"}>{props.buttonText}</ActionButton>
+            <ActionButton inverted={false} type={"submit"} onClick={props.buttonClick}>{props.buttonText}</ActionButton>
         </AddEditWrapper>
     )
 }

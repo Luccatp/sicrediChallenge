@@ -29,6 +29,7 @@ export const EditDragons = (props:any) => {
             histories={""} 
             handleRemoveClick={() => null}
             handleEditClick={() => null}
+            buttonClick={() => null}
         />
     )
 }
