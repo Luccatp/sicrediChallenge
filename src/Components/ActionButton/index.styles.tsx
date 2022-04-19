@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 interface Props {
     inverted:boolean
+    red:boolean
 }
 
 export const Button = styled.button`
@@ -41,6 +42,11 @@ export const Button = styled.button`
       }
     `:
     css``}
+
+    ${(p:Props) => p.red ?
+    css`
+      border-color: red;
+    `: css``}
 
       
   

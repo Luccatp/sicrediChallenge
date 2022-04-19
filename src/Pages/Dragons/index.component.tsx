@@ -1,7 +1,4 @@
-import React, { useContext } from "react"
 import { Header } from "../../Components/Header/index.component"
-import { DragonsContext } from "../../Contexts/DragonsContext"
-import { Dragon } from "../../Interfaces"
 import { DragonsWrapper } from "./index.styles"
 import {useHistory} from 'react-router-dom'
 import { CardList } from "../../Components/CardsList/index.component"

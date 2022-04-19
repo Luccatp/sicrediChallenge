@@ -1,5 +1,5 @@
 import { ActionButton } from "../ActionButton/index.component"
-import { DivHeader, HeaderTitle } from "./index.styles"
+import { ButtonDiv, DivHeader, HeaderTitle, TitleDiv } from "./index.styles"
 
 interface HeaderProps {
     onClick: any
@@ -8,8 +8,12 @@ interface HeaderProps {
 export const Header = (props:HeaderProps) => {
     return(
         <DivHeader>
-            <HeaderTitle>SICREDI DRAGONS</HeaderTitle>
-            <ActionButton inverted onClick={props.onClick} type={"button"}>Log Out</ActionButton>
+            <TitleDiv>
+                <HeaderTitle>SICREDI DRAGONS</HeaderTitle>
+            </TitleDiv>
+            <ButtonDiv>
+                <ActionButton red onClick={props.onClick} type={"button"}>Log Out</ActionButton>
+            </ButtonDiv>
         </DivHeader>
     )
 }

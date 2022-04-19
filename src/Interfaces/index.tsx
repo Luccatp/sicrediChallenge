@@ -6,8 +6,3 @@ export interface Dragon {
     id: number
 }
 
-export interface NewDragon {
-    name:string,
-    type:string
-}
-

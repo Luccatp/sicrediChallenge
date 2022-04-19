@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const FlipCard = styled.div`
     background-color: transparent;
-    width: 19rem;
-    height: 15rem;
+    width: 15rem;
+    height: 11rem;
     perspective: 1000px;
 `
 
@@ -14,8 +14,8 @@ export const ImageDiv = styled.div`
 `
 
 export const DragonImg = styled.img`
-    height: 12rem;
-    width: 12rem;
+    height: 5rem;
+    width: 6rem;
     border-radius: 10px;
     margin-top: 5px;
 `
@@ -65,14 +65,13 @@ export const FlipCardBack = styled(FlipCardBackFront)`
     border: none;
 
     & h1{
+        margin:0px auto;
         border-bottom: 1px solid white;
     }
 `
 
 export const DragonInfo = styled.div`
-    font-size: x-large;
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
 `
