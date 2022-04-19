@@ -10,3 +10,23 @@ export const DragonsWrapper = styled.div`
     min-height: 100vh;
     background-color: #eeeeee;
 `
+
+export const AddPageButton = styled.button`
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #64C832;
+    border: 1px solid black;
+    font-size: 1rem;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+` 

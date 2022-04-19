@@ -1,5 +1,5 @@
 import { Header } from "../../Components/Header/index.component"
-import { DragonsWrapper } from "./index.styles"
+import { AddPageButton, DragonsWrapper } from "./index.styles"
 import {useHistory} from 'react-router-dom'
 import { CardList } from "../../Components/Cards/CardsList/index.component"
 import React, { useContext, useEffect } from "react"
@@ -41,6 +41,7 @@ export const DragonsPage = () => {
     <DragonsWrapper>
         <Header onClick={logOutClick}/>
         <CardList handleEditClick={editHandler} handleRemoveClick={removeHandler}/>
+        <AddPageButton>+</AddPageButton>
     </DragonsWrapper>
     )
 }

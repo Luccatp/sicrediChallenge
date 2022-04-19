@@ -1,9 +1,12 @@
 import React, { useState } from "react"
+import { useHistory } from "react-router-dom"
+import { dragonsApi } from "../../API"
 import { AddEditContainer } from "../../containers/AddEditPages"
 
 
 
 export const EditDragons = (props:any) => {
+    const history = useHistory()
     const [name, setName] = useState<string>(props.location.state.name)
     const [type, setType] = useState<string>(props.location.state.type)
     
@@ -13,6 +16,17 @@ export const EditDragons = (props:any) => {
 
     const typeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
         setType(e.target.value)
+    }
+
+    
+    const editButtonClick = async (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        history.push('dragons') 
+        await dragonsApi.put(`dragon/${props.location.state.id}`, {
+            name:name,
+            type:type,
+        })
+        window.location.reload()
     }
 
     return(
@@ -29,7 +43,7 @@ export const EditDragons = (props:any) => {
             histories={""} 
             handleRemoveClick={() => null}
             handleEditClick={() => null}
-            buttonClick={() => null}
+            buttonClick={editButtonClick}
         />
     )
 }
