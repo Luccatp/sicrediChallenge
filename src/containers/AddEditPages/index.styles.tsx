@@ -5,6 +5,9 @@ export const RightSide = styled.div`
         height: 100%;
         width: 100vw;
         border-top: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 `
 
 export const AddWrapper = styled.div`

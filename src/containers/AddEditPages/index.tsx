@@ -1,7 +1,6 @@
 import { ChangeEventHandler } from "react";
 import { AddEditForm } from "../../Components/AddEditForm/index.component";
 import { DragonGist } from "../../Components/DragonGist/index.component";
-import { Dragon } from "../../Interfaces";
 import { AddWrapper, RightSide } from "./index.styles";
 
 interface ContainerProps {
@@ -10,10 +9,16 @@ interface ContainerProps {
     buttonText:string
     onChangeName:ChangeEventHandler
     onChangeType:ChangeEventHandler
+    name:string
+    type:string
+    id:number
+    createdAt:string
+    histories:string
+
 }
 
 
-export const AddEditContainer = (props:ContainerProps, dragonInfo:Dragon) => (
+export const AddEditContainer = (props:ContainerProps) => (
     <AddWrapper>
             <AddEditForm 
                 NameValue={props.NameValue}
@@ -22,6 +27,6 @@ export const AddEditContainer = (props:ContainerProps, dragonInfo:Dragon) => (
                 onChangeName={props.onChangeName}
                 onChangeType={props.onChangeType}
             />
-            <RightSide><DragonGist createdAt={''} name={dragonInfo.name} type={dragonInfo.type} histories={dragonInfo.histories} id={dragonInfo.id}/></RightSide>
+            <RightSide><DragonGist createdAt={props.createdAt} name={props.name} type={props.type} histories={props.histories} id={props.id} /></RightSide>
         </AddWrapper>
 )
