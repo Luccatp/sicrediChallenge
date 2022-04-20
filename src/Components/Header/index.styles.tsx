@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const DivHeader = styled.div`
     background-color: #a4a4a4;
     height: 20vh;

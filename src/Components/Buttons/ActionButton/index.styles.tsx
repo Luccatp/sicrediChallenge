@@ -47,8 +47,4 @@ export const Button = styled.button`
     css`
       border-color: red;
     `: css``}
-
-      
-  
-      
 `

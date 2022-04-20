@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const CardListDiv = styled.div`
     display: grid;
     justify-items: center;

@@ -22,6 +22,7 @@ export const DragonsContext = createContext<DragonsContextType>({
 export const DragonsProvider = ({children}:any) => {
     const history = useHistory()
     const [currentDragons, setDragons] = useState<Dragon[]>([])
+    
     useEffect(() => {
         dragonsApi.get('dragon')
         .then(response => {
@@ -29,6 +30,8 @@ export const DragonsProvider = ({children}:any) => {
             setDragons(dragonsSorted)
         })
     }, [history])  
+
     const value = {currentDragons, setDragons}
+
     return <DragonsContext.Provider value={value}>{children}</DragonsContext.Provider>
 }
