@@ -14,6 +14,7 @@ export const EditButton = styled.button`
 	border-radius: 26px;
 	border: 2px solid #000000;
 	text-transform: uppercase;
+	text-align: center;
 	font-weight: 700;
     justify-content: center;
     justify-items: right;

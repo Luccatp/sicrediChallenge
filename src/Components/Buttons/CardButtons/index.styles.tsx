@@ -12,13 +12,13 @@ export const CardButtons = (props:CardButtonsProps) => {
             className="editButton"
             onClick={props.handleEditClick} 
             data-testid="Edit"
-            >Edit
+            >Editar
         </EditButton>
         <RemoveButton
             className="removeButton" 
             onClick={props.handleRemoveClick} 
             data-testid="Remove"
-            >Remove
+            >Remover
         </RemoveButton>
     </ButtonsDiv>
     )

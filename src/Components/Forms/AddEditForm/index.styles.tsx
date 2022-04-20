@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const AddEditWrapper = styled.div`
     border: 3px solid black;
     height: fit-content;

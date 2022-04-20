@@ -1,7 +1,7 @@
 import { ChangeEventHandler, MouseEventHandler } from "react";
 import { AddEditForm } from "../../Components/Forms/AddEditForm/index.component";
 import { DragonGist } from "../../Components/Cards/DragonGist/index.component";
-import { AddWrapper, RightSide } from "./index.styles";
+import { AddEditWrapper, RightSide } from "./index.styles";
 
 interface ContainerProps {
     NameValue:string
@@ -21,7 +21,7 @@ interface ContainerProps {
 
 
 export const AddEditContainer = (props:ContainerProps) => (
-    <AddWrapper>
+    <AddEditWrapper>
             <AddEditForm 
                 NameValue={props.NameValue}
                 TypeValue={props.TypeValue}
@@ -41,5 +41,5 @@ export const AddEditContainer = (props:ContainerProps) => (
                     handleRemoveClick={props.handleRemoveClick}
                 />
             </RightSide>
-        </AddWrapper>
+        </AddEditWrapper>
 )

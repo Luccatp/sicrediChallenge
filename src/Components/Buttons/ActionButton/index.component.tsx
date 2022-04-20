@@ -9,5 +9,11 @@ interface ButtonProps {
 }
 
 export const ActionButton = (props:ButtonProps) => (
-    <Button inverted = {props.inverted ? props.inverted : false} red={props.red ? props.red : false} onClick={props.onClick} data-testid="ActionButton">{props.children}</Button>
+    <Button 
+        inverted = {props.inverted ? props.inverted : false} 
+        red={props.red ? props.red : false} 
+        onClick={props.onClick} 
+        data-testid="ActionButton"
+        >{props.children}
+    </Button>
 )

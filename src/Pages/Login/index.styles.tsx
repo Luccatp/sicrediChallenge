@@ -15,4 +15,5 @@ export const LoginWrapper = styled.div`
     min-height: 100vh;
     min-width: 100vw;
     background-color: #eeeeee;  
+    background-image: url('../../Images/LogoDragon.png');
 `

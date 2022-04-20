@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const DivHeader = styled.div`
     background-color: #a4a4a4;
     height: 20vh;
@@ -26,4 +25,9 @@ export const HeaderTitle = styled.h1`
     width: fit-content;
     height: max-content;
     text-align: center;
+`
+
+export const LogoDragon = styled.img`
+    height: 10rem;
+    width: 10rem;
 `

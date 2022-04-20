@@ -15,9 +15,26 @@ export interface NewDragon {
 export const AddEditForm = (props:NewDragon) => {
     return(
         <AddEditWrapper>
-            <TextInput value={props.NameValue} type="text" label="Nome" onChange={props.onChangeName}/>
-            <TextInput value={props.TypeValue} type="text" label="Tipo" onChange={props.onChangeType}/>
-            <ActionButton inverted={false} type={"submit"} onClick={props.buttonClick}>{props.buttonText}</ActionButton>
+            <TextInput 
+                value={props.NameValue} 
+                type="text" 
+                label="Nome" 
+                onChange={props.onChangeName} 
+                maxLength={16}
+            />
+            <TextInput 
+                value={props.TypeValue} 
+                type="text" 
+                label="Tipo" 
+                onChange={props.onChangeType} 
+                maxLength={16}
+            />
+            <ActionButton 
+                inverted={false} 
+                type={"submit"} 
+                onClick={props.buttonClick}
+                >{props.buttonText}
+            </ActionButton>
         </AddEditWrapper>
     )
 }
