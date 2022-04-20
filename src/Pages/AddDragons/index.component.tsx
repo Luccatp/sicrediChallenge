@@ -22,7 +22,7 @@ export const AddDragons = () => {
     
     const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        history.push('/dragon')
+        history.push('/dragons')
         await dragonsApi.post('dragon', {
             name:name,
             type:type
