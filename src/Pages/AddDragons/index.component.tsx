@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
 import { useHistory } from "react-router-dom"
-import { dragonsApi } from "../../API"
+import { dragonsApi } from "../../API/DragonsAPI"
 import { AddEditContainer } from "../../containers/AddEditPages"
 import { DragonsContext } from "../../Contexts/DragonsContext"
 

@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom'
 import { CardList } from "../../Components/Cards/CardsList/index.component"
 import React, { useContext, useEffect } from "react"
 import { DragonsContext } from "../../Contexts/DragonsContext"
-import { dragonsApi } from "../../API"
+import { dragonsApi } from "../../API/DragonsAPI"
 
 export const DragonsPage = () => {
     const history = useHistory()

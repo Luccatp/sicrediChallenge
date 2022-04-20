@@ -10,7 +10,7 @@ export const RightSide = styled.div`
         justify-content: center;
 `
 
-export const AddWrapper = styled.div`
+export const AddEditWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     display: grid;

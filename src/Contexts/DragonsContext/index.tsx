@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { dragonsApi } from "../../API";
+import { dragonsApi } from "../../API/DragonsAPI";
 import { Dragon } from "../../Interfaces";
 
 type DragonsContextType = {
@@ -27,7 +27,7 @@ export const DragonsProvider = ({children}:any) => {
         .then(response => {
             const dragonsSorted = response.data.sort((a:Dragon,b:Dragon) => a.name.localeCompare(b.name))
             setDragons(dragonsSorted)
-        }).catch(() => history.push('/error'))
+        })
     }, [history])  
     const value = {currentDragons, setDragons}
     return <DragonsContext.Provider value={value}>{children}</DragonsContext.Provider>
