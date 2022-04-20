@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+ENGLISH VERSION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+LOGIN
 
-In the project directory, you can run:
+email: lucca.paradeda@sicredi.com
+senha: Sicredi123
 
-### `npm start`
+Sicredi Dragons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+An application used to CREATE, READ, UPDATE, DELETE, (CRUD) dragons with an unique Login, built with React, JavaScript, and CSS. Designed mobile first.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Project Status
 
-### `npm test`
+This project is currently in development. Users can use all the functionalityes need. Need to add more error pages and increment more tests (aiming to achieve 70% coverage). Add an extra page with the dragons histories.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Project Extras: 
 
-### `npm run build`
+I added a extra feature that is to add a dragon, also added an error404 page, you can get there by typing something that doen't exists in the url, one more feature that I put in this project is the flip card, so instead of a pege with the dragons info you just hover your mouse on the cards and they flip whith all the info you need about them.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installation and Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Installation:
 
-### `npm run eject`
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To Run Test Suite:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To Start Server:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+npm start
 
-## Learn More
+To Visit App:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Reflection
+
+This project had me out of my confort zone while experimenting with some things that I'm not used to use such as contexts and design mobile first, those two things made my life so much easier while making me learn a lot more about react and css 
+
+I had an dependency error while coding unfortunally React18 has a bug if working whith an older version of react router dom, I'm used to use version 5.3v of RRD therefore I had to downgrade my React to version 17.0.2v.
+
+I started the project using npx create-react-app my-app --template typescript, to minimize initial setup time investment. Typescript helps to keep the code easier to debug while helping with logic errors along the way, It also supports you in case you forget about a prop that is necessary fro some implementation to work.
+
+Some of the technologies that I implemented in this project are React, React-Router-dom 5.3.0v, JSX, Styled-components, Jest, toastify, typescript.
+
+
+
+BRAZILIAN PORTUGUESE VERSION

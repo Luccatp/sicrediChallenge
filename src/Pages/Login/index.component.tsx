@@ -20,7 +20,7 @@ export const LoginPage = () => {
 
     const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if(email === '1@1' && password === '1') {
+        if(email === 'lucca.paradeda@sicredi.com' && password === 'Sicredi123') {
             window.localStorage.setItem('login', 'true')
             history.push('/dragons')
             

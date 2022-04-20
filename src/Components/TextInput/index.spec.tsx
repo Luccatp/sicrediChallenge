@@ -5,7 +5,7 @@ import { TextInput } from "./index.component"
 const onChangeMock = jest.fn()
 
 const setup = () => {
-    render(<TextInput onChange={onChangeMock} value="" type='text' label="Teste"/>)
+    render(<TextInput onChange={onChangeMock} value="" type='text' label="Teste" maxLength={10}/>)
 }
 
 it('expect onChange to be called',() => {

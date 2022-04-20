@@ -2,6 +2,7 @@ import { ChangeEventHandler } from "react"
 import { Group, Input, InputLabel } from "./index.styles"
 
 interface InputsProps {
+    maxLength: number | undefined
     value:string,
     type:string,
     label:string,
@@ -16,7 +17,7 @@ export const TextInput = (props:InputsProps) => {
                 value={props.value}
                 type={props.type}
                 onChange={props.onChange}
-                maxLength={16}
+                maxLength={props.maxLength}
             />
             {props.label && <InputLabel 
                 shrink={props.value.length > 0 ? true : false} 
